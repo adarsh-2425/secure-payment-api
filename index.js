@@ -7,9 +7,13 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Payment Routes
+// Payment Route
 const paymentRoutes = require("./routes/paymentRoutes");
 app.use('/api/payment', paymentRoutes);
+
+// Confirm Payment Route
+const confirmRoutes = require("./routes/confirmRoutes");
+app.use('/api/payment', confirmRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
