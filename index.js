@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const connectDb = require('./db.js');
 connectDb();
 
-// Middleware
+// Bodyparser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -30,6 +30,14 @@ app.use('/api/payment', refundRoutes);
 // Refund Info Route
 const refundInfoRoutes = require("./routes/refundInfoRoutes");
 app.use('/api/payment', refundInfoRoutes);
+
+// Serve static files from the "public" folder
+app.use(express.static('public'));
+
+// Home route
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
 
 // Error handling middleware
 app.use((err, req, res, next) => {

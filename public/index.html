@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Payment System API Documentation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    .container {
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+    .api-section {
+      margin-top: 30px;
+      text-align: left;
+    }
+    .api-title {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .api-description {
+      font-size: 1.1rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Secure Payment System API Documentation</h1>
+    <p>Explore the APIs provided by the Secure Payment System API to manage payments, payment information, and refunds.</p>
+
+    <div class="api-section">
+      <h2 class="api-title">Payment APIs</h2>
+      <p class="api-description">Learn how to use the payment APIs:</p>
+      <ul>
+        <li><code>POST /api/payment/create-payment</code>: Create a new payment</li>
+        <li><code>GET /api/payment/payment-info</code>: Retrieve all payment information</li>
+        <li><code>GET /api/payment/payment-info/:paymentId</code>: Get payment information by ID</li>
+      </ul>
+    </div>
+
+    <div class="api-section">
+      <h2 class="api-title">Refund APIs</h2>
+      <p class="api-description">Learn how to use the refund APIs:</p>
+      <ul>
+        <li><code>POST /api/refund/refund-payment</code>: Initiate a refund</li>
+        <li><code>GET /api/refund/refund-info</code>: Retrieve all refund information</li>
+        <li><code>GET /api/refund/refund-info/:refundId</code>: Get refund information by ID</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
