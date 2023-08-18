@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
+// Database connection
+const connectDb = require('./db.js');
+connectDb();
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -14,6 +17,10 @@ app.use('/api/payment', paymentRoutes);
 // Confirm Payment Route
 const confirmRoutes = require("./routes/confirmRoutes");
 app.use('/api/payment', confirmRoutes);
+
+// Payment Info Route
+const paymentInfoRoutes = require("./routes/paymentInfoRoutes");
+app.use('/api/payment', paymentInfoRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
