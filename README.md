@@ -3,11 +3,13 @@
 ## Description
 The Secure Payment System API is a backend project built using Node.js, Express.js, MongoDB, and the Stripe API. It provides a set of APIs to manage payments, payment information, and refunds.
 
+For a quick test, you can use the API hosted at <a href="https://secure-payment-api.onrender.com" target="_blank">https://secure-payment-api.onrender.com</a>
+
 ## Installation
 1. Clone the repository:
 
 ```
-git clone https://github.com/your-username/secure-payment-api.git
+git clone https://github.com/adarsh-2425/secure-payment-api.git
 cd secure-payment-api
 ```
 
