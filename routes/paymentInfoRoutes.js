@@ -5,6 +5,6 @@ const paymentInfoController = require('../controllers/paymentInfoController');
 router.get('/payment-info', paymentInfoController.getAllPaymentInfo);
 
 // Get specific payment info
-router.get('/:paymentId', paymentInfoController.getPaymentById);
+router.get('payment-info/:paymentId', paymentInfoController.getPaymentById);
 
 module.exports = router;

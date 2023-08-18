@@ -19,8 +19,17 @@ const confirmRoutes = require("./routes/confirmRoutes");
 app.use('/api/payment', confirmRoutes);
 
 // All Payment Info Route
+//Two routes at this path. even if multiple routes in module, one i enough in main file
 const paymentInfoRoutes = require("./routes/paymentInfoRoutes");
 app.use('/api/payment', paymentInfoRoutes);
+
+// Refund Payment Route
+const refundRoutes = require("./routes/refundRoutes");
+app.use('/api/payment', refundRoutes);
+
+// Refund Info Route
+const refundInfoRoutes = require("./routes/refundInfoRoutes");
+app.use('/api/payment', refundInfoRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
