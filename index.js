@@ -18,7 +18,7 @@ app.use('/api/payment', paymentRoutes);
 const confirmRoutes = require("./routes/confirmRoutes");
 app.use('/api/payment', confirmRoutes);
 
-// Payment Info Route
+// All Payment Info Route
 const paymentInfoRoutes = require("./routes/paymentInfoRoutes");
 app.use('/api/payment', paymentInfoRoutes);
 
